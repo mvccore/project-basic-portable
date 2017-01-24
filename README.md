@@ -2,6 +2,7 @@
 
 [![Latest Stable Version](https://img.shields.io/badge/Stable-v3.1.5-brightgreen.svg?style=plastic)](https://github.com/mvccore/project-basic-portable/releases)
 [![License](https://img.shields.io/badge/Licence-BSD-brightgreen.svg?style=plastic)](https://github.com/mvccore/project-basic-portable/blob/master/LICENCE.md)
+[![Packager Build](https://img.shields.io/badge/Packager%20Build-passing-brightgreen.svg?style=plastic)](https://github.com/mvccore/packager)
 ![PHP Version](https://img.shields.io/badge/PHP->=5.3-brightgreen.svg?style=plastic)
 
 - [**MvcCore**](https://github.com/mvccore/mvccore) basic website project, source code for fully portable build, recomanded to pack with [**Packager**](https://github.com/mvccore/packager) in strict package mode or in any mixed mode with hard drive, all assets are linked with [**MvcCore Extension - View Helper Assets**](https://github.com/mvccore/ext-viewhelp-assets).
