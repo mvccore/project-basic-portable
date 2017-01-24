@@ -1,0 +1,36 @@
+<?php /** @var $this MvcCore_View */ ?><!DOCTYPE HTML>
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8" />
+		<title><?php echo $this->Title; ?></title>
+		
+		<?php /* force render mode in newest IE, strictly do not use any back compatibility modes in MSIE browsers for this page */ ?>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		
+		<link rel="shortcut icon" href="static/img/favicon.ico" />
+		<?php echo $this->Css('fixedHead')->Render(); ?>
+		<?php echo $this->Js('fixedHead')->Render(); ?>
+	</head>
+	<body>
+	
+		<!--[if lt IE 9]><div class="filters"><![endif]-->
+		<!--[if (gt IE 8)|!(IE)]><!--><div class="no-filters">
+			<!--<![endif]-->
+			
+			<div class="master-container">
+				<div class="content">
+				
+					<?php echo $this->GetContent(); ?>
+					
+				</div>
+			</div>
+			
+		</div>
+		
+	</body>
+	
+	<?php echo $this->Js('varFoot')->Render(); ?>
+	
+</html>
