@@ -3,9 +3,11 @@
 class App_Bootstrap {
 	public static function Init () {
 		// patch core to use extended debug class
-		MvcCoreExt_Tracy::$Editor = 'NotepadPP';
-		MvcCore::GetInstance()->SetDebugClass(MvcCoreExt_Tracy::class);
-
+		if (class_exists('MvcCoreExt_Tracy')) {
+			MvcCoreExt_Tracy::$Editor = 'NotepadPP';
+			MvcCore::GetInstance()->SetDebugClass('MvcCoreExt_Tracy');
+		}
+	
 		// use this line only if you want to pack application without JS/CSS/fonts/images
 		// inside package and you want to have all those files placed on hard drive manualy
 		// you can use this variant in modes PHP_PRESERVE_PACKAGE, PHP_PRESERVE_HDD and PHP_STRICT_HDD
