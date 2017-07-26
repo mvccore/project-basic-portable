@@ -1,14 +1,16 @@
 <?php
 
-class App_Views_Helpers_Format
+namespace App\Views\Helpers;
+
+class Format
 {
 	/**
 	 * String formater
-	 * Format any string template with curly bracket 
+	 * Format any string template with curly bracket
 	 * replacements: '...{0}...{1}...', given as first param
 	 * with params given as all next arguments
 	 * @param string $template string template with curly brackets replacements: '...{0}...{1}...'
-	 * @param mixed  $args..,  any arguments converted to string 
+	 * @param mixed  $args..,  any arguments converted to string
 	 * @return string
 	 */
 	public function Format ($template, $args) {
