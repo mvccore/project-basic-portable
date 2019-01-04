@@ -10,11 +10,13 @@ class Bootstrap
 		if (class_exists('\MvcCore\Ext\Debugs\Tracy')) {
 			\MvcCore\Ext\Debugs\Tracy::$Editor = 'NotepadPP';
 			\MvcCore\Application::GetInstance()->SetDebugClass('\MvcCore\Ext\Debugs\Tracy');
-		}	
+		}
 		
-		// Use this line only if you want to pack application without JS/CSS/fonts/images
-		// inside package and you want to have all those files placed on hard drive manually.
-		// You can use this variant in modes PHP_PRESERVE_PACKAGE, PHP_PRESERVE_HDD and PHP_STRICT_HDD.
+		/**
+		 * Use this line only if you want to pack application without JS/CSS/fonts/images
+		 * inside package and you want to have all those files placed on hard drive manually.
+		 * You can use this variant in modes PHP_PRESERVE_PACKAGE, PHP_PRESERVE_HDD and PHP_STRICT_HDD
+		 */
 		//\MvcCore\Ext\Views\Helpers\Assets::SetAssetUrlCompletion(FALSE);
 
 		// Set up application routes with custom names:
