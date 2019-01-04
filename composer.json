@@ -1,17 +1,18 @@
 {
 	"name": "mvccore/project-basic-portable",
-	"type": "application",
-	"description": "MvcCore - Project - Basic Portable - basic website project, designed for full portable build/pack.",
+	"type": "project",
+	"description": "MvcCore - Project - Basic - basic website project, designed for full portable build/pack.",
 	"keywords": [
 		"mvccore", 
-		"mvccore basic",
-		"mvccore basic project",
-		"mvccore basic portable",
-		"mvccore basic portable project",
-		"basic web",
-		"basic web project",
-		"basic portable web project",
-		"portable web",
+		"basic", 
+		"empty",
+		"project",
+		"template",
+		"basic project",
+		"new project",
+		"empty project",
+		"template project",
+		"portable",
 		"full portable"
 	],
 	"license": ["BSD-3-Clause"],
@@ -22,12 +23,12 @@
 		}
 	],
 	"require": {
-		"php": ">=5.3.0",
-		"mvccore/mvccore": "^4.2",
-		"mvccore/ext-debug-tracy": "^4.2",
-		"mvccore/ext-debug-tracy-mvccore": "^4.2",
-		"mvccore/ext-debug-tracy-routing": "^4.2",
-		"mvccore/ext-view-helper-assets": "^4.2"
+		"php": ">=5.4.0",
+		"mvccore/mvccore": "^5.0",
+		"mvccore/ext-debug-tracy": "^5.0",
+		"mvccore/ext-debug-tracy-mvccore": "^5.0",
+		"mvccore/ext-debug-tracy-routing": "^5.0",
+		"mvccore/ext-view-helper-assets": "^5.0"
 	},
-	"minimum-stability": "dev"
+	"minimum-stability": "stable"
 }

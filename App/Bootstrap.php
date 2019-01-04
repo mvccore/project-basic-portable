@@ -2,30 +2,35 @@
 
 namespace App;
 
-class Bootstrap {
-	public static function Init () {
-		// patch core to use extended debug class
-		if (class_exists('\MvcCore\Ext\Debug\Tracy')) {
-			\MvcCore\Ext\Debug\Tracy::$Editor = 'NotepadPP';
-			\MvcCore::GetInstance()->SetDebugClass(\MvcCore\Ext\Debug\Tracy::class);
+class Bootstrap
+{
+	public static function Init ()
+	{
+		// Patch core to use extended debug class:
+		if (class_exists('\MvcCore\Ext\Debugs\Tracy')) {
+			\MvcCore\Ext\Debugs\Tracy::$Editor = 'NotepadPP';
+			\MvcCore\Application::GetInstance()->SetDebugClass('\MvcCore\Ext\Debugs\Tracy');
 		}	
 		
-		// use this line only if you want to pack application without JS/CSS/fonts/images
-		// inside package and you want to have all those files placed on hard drive manualy
-		// you can use this variant in modes PHP_PRESERVE_PACKAGE, PHP_PRESERVE_HDD and PHP_STRICT_HDD
-		//\MvcCore\Ext\ViewHelpers\Assets::SetAssetUrlCompletion(FALSE);
+		// Use this line only if you want to pack application without JS/CSS/fonts/images
+		// inside package and you want to have all those files placed on hard drive manually.
+		// You can use this variant in modes PHP_PRESERVE_PACKAGE, PHP_PRESERVE_HDD and PHP_STRICT_HDD.
+		//\MvcCore\Ext\Views\Helpers\Assets::SetAssetUrlCompletion(FALSE);
 
-		// add another view helper namespace
-		\MvcCore\View::AddHelpersClassBases('\MvcCore\Ext\ViewHelpers');
-		
-		// set up application routes with custom names:
-		\MvcCore\Router::GetInstance(array(
-			'home'		=> array(
-				'pattern'		=> "#^/$#",
+		// Set up application routes with custom names:
+		\MvcCore\Router::GetInstance([
+			'home'			=> [
+				'match'			=> "#^/$#",
 				'reverse'		=> '/',
 				'controller'	=> 'Index',
 				'action'		=> 'Home',
-			),
-		));
+			],
+			/*'my_name'	=> [
+				'pattern'		=> "/my-path[/<my_param>]',
+				'controller'	=> 'MyController',
+				'action'		=> 'Index',
+				'my_param'		=> NULL,
+			],*/
+		]);
 	}
 }
