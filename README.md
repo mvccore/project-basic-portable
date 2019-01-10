@@ -6,7 +6,7 @@
 ![PHP Version](https://img.shields.io/badge/PHP->=5.4-brightgreen.svg?style=plastic)
 
 - [**MvcCore**](https://github.com/mvccore/mvccore) basic website project template, a source code for fully portable building/packing.
-- With this project source only is not possible to create single file application pack/build. To do so, follow these steps in [**`mvccore/project-portable`**](https://github.com/mvccore/project-portable#user-content-instalation)
+- With this project source only is not possible to create single file application pack/build. To do so, follow these steps in [**`mvccore/project-portable`**](https://github.com/mvccore/project-portable#user-content-instalation).
 - Project is configured for packing with [**Packager**](https://github.com/mvccore/packager) in strict package mode but is possible to change it to needs for any mixed mode with hard drive.
 - All assets are hardly linked for strict package mode with [**MvcCore Extension - View Helper Assets**](https://github.com/mvccore/ext-view-helper-assets).
 - Project lists only homepage template content and **it tries to list tables** from MySQL `cdcol` database, with `root` login and empty password credentials by `/App/config.ini` if possible.
