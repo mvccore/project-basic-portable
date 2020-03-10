@@ -4,8 +4,8 @@ namespace App\Controllers;
 
 use App\Models;
 
-class Index extends Base
-{
+class Index extends Base {
+
 	/**
 	 * Render homepage.
 	 * @return void
@@ -16,10 +16,10 @@ class Index extends Base
 		try {
 			$tables = Models\Base::GetAllDbTables();
 		} catch (\Exception $e) {
-			$this->view->ErrorMsg = $e->getMessage();
+			$this->view->errorMsg = $e->getMessage();
 		}
-		$this->view->Tables = $tables;
-		$this->view->Title = 'MvcCore Project - Basic';
+		$this->view->tables = $tables;
+		$this->view->title = 'MvcCore Project - Basic';
     }
 
     /**
@@ -40,8 +40,8 @@ class Index extends Base
 		$message = $this->request->GetParam('message', 'a-zA-Z0-9_;, \\/\-\@\:\.');
 		$message = preg_replace('#`([^`]*)`#', '<code>$1</code>', $message);
 		$message = str_replace("\n", '<br />', $message);
-		$this->view->Title = "Error $code";
-		$this->view->Message = $message;
+		$this->view->title = "Error $code";
+		$this->view->message = $message;
 		$this->Render('error');
 	}
 }
