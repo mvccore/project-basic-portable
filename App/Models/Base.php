@@ -13,7 +13,7 @@ class Base extends \MvcCore\Model {
 	public static function GetAllDbTables () {
 		$dbName = self::GetConfig()->database;
 
-		$select = self::GetDb()->prepare(implode("\n", [
+		$select = self::GetConnection()->prepare(implode("\n", [
 			"SELECT	TABLE_NAME as TableName	",
 			"FROM information_schema.TABLES	",
 			"WHERE TABLE_SCHEMA = :dbName	",
