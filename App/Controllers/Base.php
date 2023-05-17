@@ -24,7 +24,7 @@ class Base extends \MvcCore\Controller {
 
 	private function _preDispatchSetUpBundles () {
 		\MvcCore\Ext\Views\Helpers\Assets::SetGlobalOptions(
-			(array) \MvcCore\Config::GetSystem()->assets
+			(array) $this->GetConfigSystem()->assets
 		);
 		$static = self::$staticPath;
 		$this->view->Css('fixedHead')
