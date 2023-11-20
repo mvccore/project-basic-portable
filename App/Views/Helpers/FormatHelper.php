@@ -5,6 +5,14 @@ namespace App\Views\Helpers;
 class FormatHelper {
 
 	/**
+	 * This magic function is required when using this view helper
+	 * in view script as local closure variable in single file application.
+	 */
+	public function __invoke () {
+		return call_user_func_array([$this, 'Format'], func_get_args());
+	}
+
+	/**
 	 * SIMPLE DEMO string formatter.
 	 * Format any string template with curly bracket
 	 * replacements: '...{0}...{1}...', given as first param
