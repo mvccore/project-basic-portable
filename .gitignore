@@ -65,5 +65,8 @@ composer-update.*
 
 # Application tmp dirs
 Var/Tmp/*
+!Var/Tmp/.dummy
 Var/Logs/*
-www/static/tmp
+!Var/Logs/.dummy
+static/tmp/*
+!static/tmp/.dummy
